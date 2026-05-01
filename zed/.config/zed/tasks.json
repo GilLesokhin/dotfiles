@@ -1,0 +1,34 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+//
+// Example:
+[
+  {
+    "label": "Run Python in venv",
+    "command": "uv run",
+    "args": ["$ZED_FILE"],
+  },
+  {
+    "label": "Run Python",
+    "command": "python3",
+    "args": ["$ZED_FILE"],
+  },
+  {
+    "label": "Compile C",
+    "command": "clang",
+    "args": ["*.c", "-o", "app", "-Wall", "-Wextra", "-Wpedantic"],
+  },
+  {
+    "label": "Compile C++",
+    "command": "clang++",
+    "args": ["*.cpp", "-o", "app", "-Wall", "-Wextra", "-Wpedantic"],
+  },
+  {
+    "label": "Run C/C++ app",
+    "command": "./app",
+  },
+  {
+    "label": "Run Go",
+    "command": "go",
+    "args": ["run", "."],
+  },
+]
