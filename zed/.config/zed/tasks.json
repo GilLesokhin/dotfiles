@@ -9,7 +9,7 @@
   },
   {
     "label": "Run Python",
-    "command": "python3",
+    "command": "python",
     "args": ["$ZED_FILE"],
   },
   {
