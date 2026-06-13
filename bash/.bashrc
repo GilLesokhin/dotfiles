@@ -77,3 +77,6 @@ if [ -d ~/.bashrc.d ]; then
   done
 fi
 unset rc
+
+export EDITOR="nvim"
+export VISUAL="nvim"
