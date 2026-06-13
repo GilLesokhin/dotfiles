@@ -46,6 +46,7 @@ alias ....='cd ../../..'
 # Tools
 alias c='opencode'
 alias t='tmux attach || tmux new -s Work'
+alias y='yazi'
 n() { if [ "$#" -eq 0 ]; then command nvim .; else command nvim "$@"; fi; }
 
 # Git
@@ -53,6 +54,12 @@ alias g='git'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
+
+# nvim
+if command -v nvim &>/dev/null; then
+  export EDITOR="nvim"
+  export VISUAL="nvim"
+fi
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -65,9 +72,6 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
   for rc in ~/.bashrc.d/*; do
@@ -77,6 +81,3 @@ if [ -d ~/.bashrc.d ]; then
   done
 fi
 unset rc
-
-export EDITOR="nvim"
-export VISUAL="nvim"
