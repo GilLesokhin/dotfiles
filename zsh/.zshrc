@@ -15,8 +15,14 @@ setopt histignorespace     # skip commands starting with space
 setopt histreduceblanks    # trim extra whitespace in history
 setopt incappendhistory    # write to history immediately, not just on exit
 setopt sharehistory        # share history across all terminal sessions
+setopt histfcntllock       # use fcntl locking for safer concurrent writes
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 setopt autopushd           # cd pushes old dir onto stack (popd to go back)
 setopt correct             # suggest spelling corrections for commands
+SPROMPT='%F{red}%R%f → %F{green}%r%f? [y/N/a/e] '
 
 # --- Zsh plugins ----------------------------------------------------------
 
@@ -50,6 +56,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=*
 # --- File system aliases --------------------------------------------------
 if command -v eza &>/dev/null; then
   alias ls='eza -lh --group-directories-first --icons=auto'
+  alias la='eza -a --group-directories-first --icons=auto'
   alias lsa='ls -a'
   alias lt='eza --tree --level=2 --long --icons --git'
   alias lta='lt -a'
