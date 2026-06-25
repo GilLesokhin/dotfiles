@@ -81,3 +81,6 @@ if [ -d ~/.bashrc.d ]; then
   done
 fi
 unset rc
+
+# Disable green background on world-writable directories (WSL /mnt/c/ fix)
+LS_COLORS="$LS_COLORS:ow=01;34:tw=30;44"
