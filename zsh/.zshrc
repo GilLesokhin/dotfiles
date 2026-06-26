@@ -33,6 +33,18 @@ LS_COLORS="$LS_COLORS:ow=01;34:tw=30;44"
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+# --- fzf Smart Previews ----------------------------------------------------
+zstyle ':fzf-tab:*' fzf-flags '--height=50%' '--preview-window=right:60%'
+zstyle ':fzf-tab:complete:*:*' fzf-preview '
+  mime=$(file --mime-type -b ${(Q)realpath})
+  if [[ -d ${(Q)realpath} ]]; then
+    eza --tree --level=2 --color=always --icons ${(Q)realpath}
+  elif [[ $mime == image/* ]]; then
+    kitty icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@0x0 ${(Q)realpath}
+  else
+    bat --style=numbers --color=always --line-range=:500 ${(Q)realpath}
+  fi'
+
 # --- Plugins --------------------------------------------------------------
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
