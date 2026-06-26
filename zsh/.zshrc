@@ -33,7 +33,7 @@ LS_COLORS="$LS_COLORS:ow=01;34:tw=30;44"
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-# --- fzf Smart Previews ----------------------------------------------------
+# --- fzf Smart Previews ---------------------------------------------------
 zstyle ':fzf-tab:*' fzf-flags '--height=50%' '--preview-window=right:60%'
 zstyle ':fzf-tab:complete:*:*' fzf-preview '
   mime=$(file --mime-type -b ${(Q)realpath})
