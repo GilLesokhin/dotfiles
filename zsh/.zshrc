@@ -35,13 +35,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=*
 
 # --- Plugins --------------------------------------------------------------
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
-source ~/.zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 # --- Editor ---------------------------------------------------------------
 if command -v nvim &>/dev/null; then
