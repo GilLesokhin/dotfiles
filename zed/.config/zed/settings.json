@@ -37,7 +37,7 @@
 
   // Themes
   "theme": "Catppuccin Mocha - No Italics",
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": "Catppuccin Mocha",
   "theme_overrides": {
     "Kanagawa Wave - No Italics": {
       "text.muted": "#DCD7BAB0",
