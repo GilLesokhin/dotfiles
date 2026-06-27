@@ -15,11 +15,11 @@
       "effort": "medium",
       "enable_thinking": true,
       "provider": "google",
-      "model": "gemini-3.5-flash"
+      "model": "gemini-2.5-flash"
     },
     "thread_summary_model": {
       "provider": "google",
-      "model": "gemini-3.5-flash"
+      "model": "gemini-2.5-flash"
     }
   },
 
