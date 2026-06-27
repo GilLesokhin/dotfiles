@@ -50,6 +50,9 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # --- Editor ---------------------------------------------------------------
+bindkey -v
+bindkey "^[[3~" delete-char
+bindkey -a "^[[3~" delete-char
 if command -v nvim &>/dev/null; then
   export EDITOR="nvim"
   export VISUAL="nvim"
