@@ -12,8 +12,6 @@
     "sidebar_side": "right",
     "dock": "right",
     "default_model": {
-      "effort": "medium",
-      "enable_thinking": true,
       "provider": "google",
       "model": "gemini-2.5-flash"
     },
