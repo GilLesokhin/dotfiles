@@ -11,6 +11,14 @@
   "agent": {
     "sidebar_side": "right",
     "dock": "right",
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-3.5-flash"
+    },
+    "thread_summary_model": {
+      "provider": "google",
+      "model": "gemini-3.5-flash"
+    }
   },
 
   // Panel
@@ -18,7 +26,7 @@
   "project_panel": { "dock": "left", "hide_root": true },
   "outline_panel": { "dock": "left" },
   "git_panel": { "dock": "left" },
-  "git": { "inline_blame": { "enabled": false } },
+  //"git": { "inline_blame": { "enabled": false } },
 
   "telemetry": { "diagnostics": false, "metrics": false },
 
