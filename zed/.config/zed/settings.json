@@ -12,14 +12,15 @@
     "sidebar_side": "right",
     "dock": "right",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
+      "effort": "medium",
+      "enable_thinking": true,
+      "provider": "openai-subscribed",
+      "model": "gpt-5.4-mini"
     },
     "thread_summary_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
-    }
-  },
+      "provider": "openai-subscribed",
+      "model": "gpt-5.4-mini"
+    },
 
   // Panel
   "collaboration_panel": { "dock": "left", "button": false },
