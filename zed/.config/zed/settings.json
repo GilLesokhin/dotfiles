@@ -20,7 +20,8 @@
     "thread_summary_model": {
       "provider": "openai-subscribed",
       "model": "gpt-5.4-mini"
-    },
+    }
+  },
 
   // Panel
   "collaboration_panel": { "dock": "left", "button": false },
