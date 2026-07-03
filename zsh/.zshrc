@@ -9,15 +9,15 @@ eval "$(starship init zsh)"
 eval "$(/usr/bin/zoxide init zsh)"
 
 # --- Zsh options ----------------------------------------------------------
-setopt extendedglob
-setopt autopushd
-setopt correct
-setopt histignoredups
-setopt histignorespace
-setopt histreduceblanks
-setopt incappendhistory
-setopt sharehistory
-setopt histfcntllock
+setopt extendedglob       # Enable extended globbing (#~^) for powerful pattern matching
+setopt autopushd          # Make cd push the old directory onto the directory stack
+setopt correct            # Suggest corrections for misspelled commands
+setopt histignoredups     # Skip consecutive duplicate entries in history
+setopt histignorespace    # Skip commands starting with a space (privacy/scratch)
+setopt histreduceblanks   # Squeeze multiple blanks out of history entries
+setopt incappendhistory   # Append to history file immediately, not at shell exit
+setopt sharehistory       # Share history across all running zsh sessions
+setopt histfcntllock      # Use file-locking (fcntl) for history, avoid corruption
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -53,6 +53,8 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey -v
 bindkey "^[[3~" delete-char
 bindkey -a "^[[3~" delete-char
+
+# Directory stack: cd -<TAB> to autocomplete from stack; popd to go back; dirs -v to list
 if command -v nvim &>/dev/null; then
   export EDITOR="nvim"
   export VISUAL="nvim"
