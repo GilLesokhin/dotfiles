@@ -15,12 +15,12 @@
       "effort": "medium",
       "enable_thinking": true,
       "provider": "openai-subscribed",
-      "model": "gpt-5.4-mini"
+      "model": "gpt-5.4-mini",
     },
     "thread_summary_model": {
       "provider": "openai-subscribed",
-      "model": "gpt-5.4-mini"
-    }
+      "model": "gpt-5.4-mini",
+    },
   },
 
   // Panel
@@ -42,7 +42,7 @@
   "terminal": {
     "font_family": "RobotoMono Nerd Font",
     "font_size": 16,
-    "cursor_shape": "bar"
+    "cursor_shape": "bar",
   },
 
   // Themes
@@ -56,8 +56,8 @@
         "punctuation": { "color": "#8a8980" },
         "punctuation.bracket": { "color": "#8a8980" },
         "punctuation.special": { "color": "#8a8980" },
-        "punctuation.list_marker": { "color": "#8a8980" }
-      }
-    }
-  }
+        "punctuation.list_marker": { "color": "#8a8980" },
+      },
+    },
+  },
 }
