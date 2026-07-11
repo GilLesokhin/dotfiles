@@ -38,7 +38,7 @@ zstyle ':fzf-tab:*' fzf-flags '--height=50%'
 zstyle ':fzf-tab:complete:*:*' fzf-preview '
   mime=$(file --mime-type -b ${(Q)realpath})
   if [[ -d ${(Q)realpath} ]]; then
-    eza --tree --level=2 --color=always --icons ${(Q)realpath}
+    eza --no-extended --tree --level=2 --color=always --icons ${(Q)realpath}
   elif [[ $mime == image/* ]]; then
     kitty icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@0x0 ${(Q)realpath}
   else
@@ -69,10 +69,10 @@ path=(~/.local/bin ~/bin $path)
 
 # --- File system ----------------------------------------------------------
 if command -v eza &>/dev/null; then
-  alias ls='eza -lh --group-directories-first --icons=auto'
-  alias la='eza -a --group-directories-first --icons=auto'
+  alias ls='eza -lh --group-directories-first --icons=auto --no-extended'
+  alias la='eza -a --group-directories-first --icons=auto --no-extended'
   alias lsa='ls -a'
-  alias lt='eza --tree --level=2 --long --icons --git'
+  alias lt='eza --tree --level=2 --long --icons --git --no-extended'
   alias lta='lt -a'
 fi
 
