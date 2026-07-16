@@ -89,6 +89,7 @@ alias gcad='git commit -a --amend'
 
 # --- Tools ----------------------------------------------------------------
 alias c='opencode'
+alias h='hermes'
 alias t='tmux attach || tmux new -s Work'
 alias y='yazi'
 n() { if [ "$#" -eq 0 ]; then command nvim .; else command nvim "$@"; fi; }
